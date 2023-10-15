@@ -15,8 +15,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class App 
 {
     public static void main( String[] args )
-
     {
+        //
         ConfigurableApplicationContext app = SpringApplication.run(App.class,args);
         Conp bean = app.getBean(Conp.class);
         bean.exe();
