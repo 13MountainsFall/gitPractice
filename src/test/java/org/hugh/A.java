@@ -10,6 +10,7 @@ import java.net.URLConnection;
  */
 class A {
     enum BB {
+        // add 1
         OPEN("1"),
         CLOSE("2");
         private final String code;

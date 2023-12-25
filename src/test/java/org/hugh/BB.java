@@ -10,6 +10,7 @@ import cn.hutool.core.date.DateUtil;
  */
 public class BB {
     public static void main(String[] args) {
+        // add 2
         String dateString = "2023-12";
         Date date = DateUtil.parse(dateString, "yyyy-MM");
         Date endOfMonth = DateUtil.endOfMonth(date);
