@@ -1,5 +1,8 @@
 package org.hugh.D01_file;
-import org.junit.Test;
+
+
+//import org.junit.*;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,7 +60,7 @@ public class FileCopy {
         }
     }
     //更多请阅读：https://www.yiibai.com/java/java-copy-file.html
-    @Test
+   // @Test
     public static void copyFileUsingJava7Files(File source, File dest) throws IOException {
         Files.copy(source.toPath(), dest.toPath());
     }
