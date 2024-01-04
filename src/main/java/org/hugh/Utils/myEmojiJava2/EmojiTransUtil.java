@@ -177,11 +177,20 @@ public class EmojiTransUtil {
         String a = "\\'+（%&＂         \uD83C\uDF1E\uE11B\uD83D\uDC79\uD83E\uDD2F\uD83E\uDD16\uD83C\uDDE8\uD83C\uDDF2";
         String b = "\\'+（%&＂         \ud83c\udf1e\ue11b\ud83d\udc79\ud83e\udd2f\ud83e\udd16";
         String c = "\'+\uff08%&\uff02,\ud83c\udf1e,\ud83d\udc7b,\ud83d\udc79,\ud83e\udd2f,\ud83e\udd16,\uf8ff";
-        System.out.println(toWithUnicode(c));
-        System.out.println(ifContainsEmoji(c));
-        System.out.println(decodeUnicode(toWithUnicode(c))); //"\ud83d\udc7b"
+//        System.out.println(toWithUnicode(c));
+//        System.out.println(ifContainsEmoji(c));
+//        System.out.println(decodeUnicode(toWithUnicode(c))); //"\ud83d\udc7b"
 //  System.out.println(toWithUnicode(b));
 //  System.out.println(decodeUnicode(toWithUnicode(b)));
+
+
+        System.out.println(ifContainsEmoji("\u007F"));
+
+        System.out.println(decodeUnicode("\u007F \\u03b5=(\\u00b4o\\uff40)"));
+        System.out.println(decodeUnicode("\uD83C\uDF61"));
+        System.out.println(toWithUnicode("ε=(´o｀)"));
+        System.out.println(toWithUnicode("\u007F"));
+        System.out.println(toWithUnicode("\uD83C\uDF61"));
 
     }
 
@@ -210,7 +219,7 @@ public class EmojiTransUtil {
     public static boolean ifContainsEmoji(String text) {
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (c > 127 && !(c >= '\u4e00' && c <= '\u9fa5')) {
+            if (c >= 127 && !(c >= '\u4e00' && c <= '\u9fa5')) {
                 // 包含非 ASCII、且也非中文的 字符，
                 return true;
             }
